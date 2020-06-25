@@ -1,5 +1,5 @@
 .page-header {
-    background-color: #C25100;
+    background-color: #E6451B;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -13,8 +13,10 @@
 .content {
     margin-left: 40px;
 }
+
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: underline;
 }
 
 .date {
@@ -38,6 +40,10 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 70px;
+    border-style: none none dashed none;
+    border-width: 2px;
+    border-color: #E6451B;
+    width: 150%;
 }
 
 .post h2 a, .post h2 a:visited {
