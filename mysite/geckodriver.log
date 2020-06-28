@@ -29,3 +29,20 @@
 1593112969503	Marionette	INFO	Listening on port 59431
 1593112969599	Marionette	WARN	TLS certificate errors will be ignored for this session
 1593112970558	Marionette	INFO	Stopped listening on port 59431
+1593114758201	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/q_/t9c40dwn4mz86l3y2nkdjjzm0000gn/T/rust_mozprofileKN9Yzq"
+1593114760645	Marionette	INFO	Listening on port 59617
+1593114760664	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593114760773	Marionette	INFO	Stopped listening on port 59617
+1593114814012	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/q_/t9c40dwn4mz86l3y2nkdjjzm0000gn/T/rust_mozprofilecGikvQ"
+1593114816175	Marionette	INFO	Listening on port 59681
+1593114816281	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593114819110	Marionette	INFO	Stopped listening on port 59681
+1593300519680	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/q_/t9c40dwn4mz86l3y2nkdjjzm0000gn/T/rust_mozprofilePVth2p"
+1593300522782	Marionette	INFO	Listening on port 60971
+1593300522848	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593300524164	Marionette	INFO	Stopped listening on port 60971
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+1593300540125	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/q_/t9c40dwn4mz86l3y2nkdjjzm0000gn/T/rust_mozprofilenF4VOr"
+1593300542025	Marionette	INFO	Listening on port 61051
+1593300542078	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593300542866	Marionette	INFO	Stopped listening on port 61051

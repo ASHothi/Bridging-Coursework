@@ -44,3 +44,9 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def cv_page(request):
+    return render(request, 'blog/cv_page.html')
+
+def home_page(request):
+    return render(request, 'blog/home_page.html')
