@@ -1,5 +1,8 @@
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
 import unittest
+
 
 class NewVisitorTest(unittest.TestCase):
 
@@ -9,35 +12,46 @@ class NewVisitorTest(unittest.TestCase):
     def tearDown(self):
         self.browser.quit()
 
-    def test_can_start_a_list_and_retrieve_it_later(self):
-        # Edith has heard about a cool new online to-do app. She goes
-        # to check out its homepage
-        self.browser.get('http://127.0.0.1:8000')
+    def test_can_go_to_cv_page_and_add_to_the_education_section(self):
 
-        # She notices the page title and header mention to-do lists
+        self.browser.get('http://127.0.0.1:8000/admin/')
+
+        username = self.browser.find_element_by_id('id_username')
+        username.send_keys('Anandbir')
+
+        password = self.browser.find_element_by_id('id_password')
+        password.send_keys('HelloWorld99')
+
+        password.send_keys(Keys.ENTER)
+
+        time.sleep(3)
+
+        self.browser.get('http://127.0.0.1:8000/cv/')
+
         self.assertIn('Anandbir\'s Website', self.browser.title)
-        self.fail('Finish the test!')
+        header_text = self.browser.find_element_by_tag_name('h1').text
+        self.assertIn('Anandbir\'s Website', header_text)
 
-        # She is invited to enter a to-do item straight away
+        button = self.browser.find_element_by_link_text("ADD TO EDUCATION SECTION")
 
-        # She types "Buy peacock feathers" into a text box (Edith's hobby
-        # is tying fly-fishing lures)
+        button.click()
 
-        # When she hits enter, the page updates, and now the page lists
-        # "1: Buy peacock feathers" as an item in a to-do list
+        title = self.browser.find_element_by_id('id_title')
+        title.send_keys('Post1')
 
-        # There is still a text box inviting her to add another item. She
-        # enters "Use peacock feathers to make a fly" (Edith is very methodical)
+        text = self.browser.find_element_by_id('id_text')
+        text.send_keys('sample text')
 
-        # The page updates again, and now shows both items on her list
+        title.send_keys(Keys.ENTER)
 
-        # Edith wonders whether the site will remember her list. Then she sees
-        # that the site has generated a unique URL for her -- there is some
-        # explanatory text to that effect.
+        self.browser.get('http://127.0.0.1:8000/cv/')
 
-        # She visits that URL - her to-do list is still there.
+        cvlist = self.browser.find_element_by_id('id_cv_list')
+        rows = cvlist.find_elements_by_tag_name('p')
+        self.assertTrue(
+            any(row.text == 'sample text' for row in rows)
+        )
 
-        # Satisfied, she goes back to sleep
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')

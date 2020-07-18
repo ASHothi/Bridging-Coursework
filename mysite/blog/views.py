@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
+from .models import CVPost
+from .models import CVPostExperience
+from .models import CVPostSkils
 from django.shortcuts import render, get_object_or_404
-from .forms import PostForm
+from .forms import PostForm, CVPostForm, CVPostExperienceForm, CVPostSkillsForm
 from django.shortcuts import redirect
 
 
@@ -31,6 +34,48 @@ def post_new(request):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 
+def cvpost_new(request):
+    if request.method == "POST":
+        form = CVPostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('cv_page')
+    else:
+        form = PostForm()
+    return render(request, 'blog/post_edit.html', {'form': form})
+
+
+def cvpostexperience_new(request):
+    if request.method == "POST":
+        form = CVPostExperienceForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('cv_page')
+    else:
+        form = PostForm()
+    return render(request, 'blog/post_edit.html', {'form': form})
+
+
+def cvpostskills_new(request):
+    if request.method == "POST":
+        form = CVPostSkillsForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('cv_page')
+    else:
+        form = PostForm()
+    return render(request, 'blog/post_edit.html', {'form': form})
+
+
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -45,8 +90,13 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
+
 def cv_page(request):
-    return render(request, 'blog/cv_page.html')
+    CVposts = CVPost.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    CVPostExperiences = CVPostExperience.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    CVPostSkills = CVPostSkils.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/cv_page.html', {'cvposts': CVposts, 'cvpostse': CVPostExperiences, 'cvpostss': CVPostSkills})
+
 
 def home_page(request):
     return render(request, 'blog/home_page.html')

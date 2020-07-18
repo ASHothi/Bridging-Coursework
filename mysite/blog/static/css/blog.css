@@ -68,3 +68,18 @@ h1, h2, h3, h4 {
 .nav li a{
   color: black;
 }
+
+.cv {
+  text-align: center;
+  margin: auto;
+  width: 150%;
+  border: 2px solid black;
+}
+
+.contact-info {
+    margin-bottom: 10px;
+    border-style: none none dashed none;
+    border-width: 2px;
+    border-color: black;
+    width: 100%;
+}

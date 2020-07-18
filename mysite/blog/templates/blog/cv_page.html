@@ -2,6 +2,61 @@
 
 {% block content %}
     <div>
-        <h1>hello</h1>
+        {% if user.is_authenticated %}
+            <a href="{% url 'cvpost_new' %}" id="id_new_cv_post">ADD TO EDUCATION SECTION</a>
+            <a href="{% url 'cvpostexperience_new' %}">ADD TO CAREER HISTORY SECTION</a>
+            <a href="{% url 'cvpostskills_new' %}">ADD TO SKILLS SECTION</a>
+        {% endif %}
+    </div>
+    <div class="cv">
+        <h2>Anandbir Hothi</h2>
+        <div class="contact-info">
+            <p>
+                11 chetwynd close walsall, West Midlands WS2 0NB
+            </p>
+            <p>
+                Contact number: 07910 745280
+            </p>
+            <p>
+                email address: anandbir@icloud.com
+            </p>
+        </div>
+        <div class="contact-info">
+            <h4>PERSONAL PROFILE</h4>
+            <p>Undergraduate university student looking to gain experience and put theory into practice within the
+                industry having recently completed my first year with First-Class Honours in Computer Science. I have
+                acquired an extensive range of skills, such as teamwork, problem solving, communication and being
+                adaptable and I am now looking to implement these in industry, whilst also learning and developing
+                additional skills to further my working knowledge.
+            </p>
+        </div>
+        <div class="contact-info" id ="id_cv_list">
+            <h4>EDUCATION</h4>
+            {% for post in cvposts %}
+                <div>
+                     <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="contact-info">
+            <h4>CAREER HISTORY</h4>
+            {% for post in cvpostse %}
+                <div>
+                     <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="contact-info">
+            <h4>SKILLS</h4>
+            {% for post in cvpostss %}
+                <div>
+                     <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div>
+            <h4>REFERENCES</h4>
+            <p>Referees available on request</p>
+        </div>
     </div>
 {% endblock %}
