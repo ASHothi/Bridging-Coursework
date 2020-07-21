@@ -9,20 +9,20 @@
         {% endif %}
     </div>
     <div class="cv">
-        <h2>Anandbir Hothi</h2>
+        <h2 class="cv-header">Anandbir Hothi</h2>
         <div class="contact-info">
-            <p>
+            <p class="cv-header">
                 11 chetwynd close walsall, West Midlands WS2 0NB
             </p>
-            <p>
+            <p class="cv-header">
                 Contact number: 07910 745280
             </p>
-            <p>
+            <p class="cv-header">
                 email address: anandbir@icloud.com
             </p>
         </div>
         <div class="contact-info">
-            <h4>PERSONAL PROFILE</h4>
+            <h4 class="cv-header">PERSONAL PROFILE</h4>
             <p>Undergraduate university student looking to gain experience and put theory into practice within the
                 industry having recently completed my first year with First-Class Honours in Computer Science. I have
                 acquired an extensive range of skills, such as teamwork, problem solving, communication and being
@@ -31,7 +31,7 @@
             </p>
         </div>
         <div class="contact-info" id ="id_cv_list">
-            <h4>EDUCATION</h4>
+            <h4 class="cv-header">EDUCATION</h4>
             {% for post in cvposts %}
                 <div>
                      <p>{{ post.text|linebreaksbr }}</p>
@@ -39,7 +39,7 @@
             {% endfor %}
         </div>
         <div class="contact-info" id ="id_cv_list2">
-            <h4>CAREER HISTORY</h4>
+            <h4 class="cv-header">CAREER HISTORY</h4>
             {% for post in cvpostse %}
                 <div>
                      <p>{{ post.text|linebreaksbr }}</p>
@@ -47,7 +47,7 @@
             {% endfor %}
         </div>
         <div class="contact-info" id ="id_cv_list3">
-            <h4>SKILLS</h4>
+            <h4 class="cv-header">SKILLS</h4>
             {% for post in cvpostss %}
                 <div>
                      <p>{{ post.text|linebreaksbr }}</p>
@@ -55,8 +55,8 @@
             {% endfor %}
         </div>
         <div>
-            <h4>REFERENCES</h4>
-            <p>Referees available on request</p>
+            <h4 class="cv-header">REFERENCES</h4>
+            <p class="cv-header">Referees available on request</p>
         </div>
     </div>
 {% endblock %}

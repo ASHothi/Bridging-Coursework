@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fc1fde3-7316-4481-a9d9-b5ec93208e64" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/mysite/blog/static/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/static/css/blog.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/cv_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/cv_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/blog/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/functional_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/functional_tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/geckodriver.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/blog/tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="930">
@@ -70,10 +68,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/blog/static/css/blog.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1060">
+              <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/blog/templates/blog/cv_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="27" />
+            <state relative-caret-position="870">
+              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -113,15 +120,15 @@
         <option value="$PROJECT_DIR$/mysite/blog/templates/blog/base.html" />
         <option value="$PROJECT_DIR$/mysite/blog/templates/blog/home_page.html" />
         <option value="$PROJECT_DIR$/mysite/blog/admin.py" />
-        <option value="$PROJECT_DIR$/mysite/blog/static/css/blog.css" />
         <option value="$PROJECT_DIR$/mysite/blog/urls.py" />
         <option value="$PROJECT_DIR$/mysite/blog/forms.py" />
         <option value="$PROJECT_DIR$/mysite/blog/models.py" />
         <option value="$PROJECT_DIR$/mysite/blog/views.py" />
         <option value="$PROJECT_DIR$/mysite/blog/templates/blog/post_edit.html" />
-        <option value="$PROJECT_DIR$/mysite/blog/templates/blog/cv_page.html" />
         <option value="$PROJECT_DIR$/mysite/functional_tests.py" />
         <option value="$PROJECT_DIR$/mysite/blog/tests.py" />
+        <option value="$PROJECT_DIR$/mysite/blog/static/css/blog.css" />
+        <option value="$PROJECT_DIR$/mysite/blog/templates/blog/cv_page.html" />
       </list>
     </option>
   </component>
@@ -301,13 +308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/blog/static/css/blog.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/blog/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -399,13 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/blog/templates/blog/cv_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/functional_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1920">
@@ -423,6 +416,20 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/blog/static/css/blog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1060">
+          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/blog/templates/blog/cv_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
         </state>
       </provider>
     </entry>
