@@ -1,7 +1,7 @@
 from django.urls import resolve
 from django.test import TestCase
 from django.http import HttpRequest
-from blog.views import cv_page, cvpost_new
+from blog.views import cv_page, cvpost_new, cvpostexperience_new, cvpostskills_new
 
 
 class CVPageTest(TestCase):
@@ -23,7 +23,7 @@ class CVPageTest(TestCase):
         html = response.content.decode('utf8')
         self.assertIn('<title>Anandbir\'s Website</title>', html)
 
-    def test_post_edit_contains_title_field_and_text_field(self):
+    def test_cv_post_edit_contains_title_field_and_text_field(self):
         request = HttpRequest()
         response = cvpost_new(request)
         html = response.content.decode('utf8')
@@ -35,4 +35,30 @@ class CVPageTest(TestCase):
         response = cv_page(request)
         html = response.content.decode('utf8')
         self.assertIn('<h4>EDUCATION</h4>', html)
+
+    def test_cv_post_experience_edit_contains_title_field_and_text_field(self):
+        request = HttpRequest()
+        response = cvpostexperience_new(request)
+        html = response.content.decode('utf8')
+        self.assertIn('id="id_title"', html)
+        self.assertIn('id="id_text"', html)
+
+    def test_cv_page_contains_a_career_section(self):
+        request = HttpRequest()
+        response = cv_page(request)
+        html = response.content.decode('utf8')
+        self.assertIn('<h4>CAREER HISTORY</h4>', html)
+
+    def test_cv_post_skills_edit_contains_title_field_and_text_field(self):
+        request = HttpRequest()
+        response = cvpostskills_new(request)
+        html = response.content.decode('utf8')
+        self.assertIn('id="id_title"', html)
+        self.assertIn('id="id_text"', html)
+
+    def test_cv_page_contains_a_skills_section(self):
+        request = HttpRequest()
+        response = cv_page(request)
+        html = response.content.decode('utf8')
+        self.assertIn('<h4>SKILLS</h4>', html)
 
